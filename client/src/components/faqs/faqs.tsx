@@ -1,8 +1,10 @@
-
+"use client";
 import { motion } from 'framer-motion';
 import Accordian from './accordian';
+import useIsMobile from '../../hooks/useMobile';
 
 const Faq = () => {
+  const isMobile = useIsMobile();
   
   type FaqType = {
     id: number;
@@ -55,9 +57,15 @@ const Faq = () => {
       viewport={{ once: true, amount: 0.5 }}
     >
 
-      <motion.h1 className="text-2xl md:text-4xl xl:text-6xl font-semibold text-center">
-        Frequently Asked Questions
-      </motion.h1>
+      {!isMobile ? (
+        <motion.h1 className="text-2xl md:text-4xl xl:text-6xl font-semibold text-center">
+          Frequently Asked Questions
+        </motion.h1>
+      ) : (
+        <motion.h1 className="text-2xl md:text-4xl xl:text-6xl font-semibold text-center">
+          FAQ's
+        </motion.h1>
+      )}
 
       <div className="flex flex-col">
         {faqsData.map((faq, idx) => (
@@ -72,7 +80,7 @@ const Faq = () => {
       <p className="text-slate-200 flex items-center gap-1 text-sm md:text-xl">
         Still have questions? Click{' '}
         <span
-          className="text-violet-600 hover:text-violet-700 transition-all duration-150 cursor-pointer"
+          className="text-violet-600 hover:text-violet-800 transition-all duration-150 cursor-pointer font-semibold text-[1.1rem] md:text-[1.4rem]"
         >
           Contact us
         </span>
