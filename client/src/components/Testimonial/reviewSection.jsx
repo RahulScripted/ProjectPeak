@@ -1,6 +1,6 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-import ButtonText from '../../helpers/button/ButtonText'
+import ButtonText from '../../helpers/button/buttonText'
 
 const testimonials = [
   {
