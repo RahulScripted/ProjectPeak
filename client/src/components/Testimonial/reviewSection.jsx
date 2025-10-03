@@ -1,6 +1,6 @@
-import React from 'react'
 import Marquee from 'react-fast-marquee'
 import ButtonText from '../../helpers/button/buttonText'
+import { assets } from '../../assets/assets'
 
 const testimonials = [
   {
@@ -110,7 +110,10 @@ const ReviewSection = () => {
       <div className="flex flex-col items-center justify-center text-center gap-3 w-full">
 
         {/* Heading */}
-        <h1 className="text-3xl md:text-5xl font-bold">What Our Users Say</h1>
+        <div className='flex flex-col items-center'>
+          <h1 className="text-3xl md:text-5xl font-bold">What Our Users Say</h1>
+          <img src={assets.mainText} alt="mainText" className='-mt-1' />
+        </div>
 
         {/* Paragraph */}
         <p className="text-sm md:text-base text-gray-300 w-full md:w-[900px]">
