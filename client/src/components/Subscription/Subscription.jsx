@@ -3,7 +3,7 @@ import ButtonVariant from '../../helpers/button/buttonVariant'
 
 const Subscription = () => {
   return (
-    <div className="w-full flex items-center justify-center py-16">
+    <div className="w-full flex items-center justify-center">
       <div className="w-full lg:w-[80%] p-10 rounded-2xl bg-gradient-to-b from-[#6613E1] to-[#A97AEE] flex flex-col md:flex-row items-center justify-between shadow-xl gap-10">
         
         <div className="w-full text-white md:w-1/2 space-y-4">

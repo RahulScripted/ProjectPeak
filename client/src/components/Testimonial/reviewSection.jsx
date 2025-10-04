@@ -1,6 +1,7 @@
 import Marquee from 'react-fast-marquee'
 import ButtonText from '../../helpers/button/buttonText'
 import { assets } from '../../assets/assets'
+import { motion } from 'framer-motion'
 
 const testimonials = [
   {
@@ -111,7 +112,14 @@ const ReviewSection = () => {
 
         {/* Heading */}
         <div className='flex flex-col items-center'>
-          <h1 className="text-3xl md:text-5xl font-bold">What Our Users Say</h1>
+          <motion.h1
+            className="text-3xl md:text-4xl xl:text-6xl font-semibold text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            What Our User Says 
+          </motion.h1>
           <img src={assets.mainText} alt="mainText" className='-mt-1' />
         </div>
 
