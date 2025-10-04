@@ -143,21 +143,21 @@ const ReviewSection = () => {
         {testimonials.map(({ id, name, job, feedback, rating }) => (
           <div
             key={id}
-            className="flex flex-col p-6 bg-[#101010] rounded-md w-full sm:w-[350px] h-[225px] cursor-pointer mr-5 md:mr-10 hover:shadow-gray-300 hover:scale-95 transition-all duration-200 relative"
+            className="flex flex-col p-6 bg-[#101010] rounded-md w-[200px] md:w-[350px] h-full md:h-[225px] cursor-pointer mr-5 md:mr-10 hover:shadow-gray-300 hover:scale-95 transition-all duration-200 relative"
           >
-            <div className="flex items-start gap-5">
-              <div className='w-14 h-14 rounded-full border border-violet-600  font-bold p-1 mb-5'>
+            <div className="flex items-start gap-3 md:gap-5">
+              <div className='w-10 md:w-14 h-10 md:h-14 rounded-full border border-violet-600  font-bold p-1 mb-5'>
                 <div className="w-full h-full rounded-full bg-violet-700 flex items-center justify-center">
                     {getInitials(name)}
                 </div>
               </div>
               <div className="flex flex-col">
-                <h1 className="text-xl font-medium">{name}</h1>
+                <h1 className="text-sm md:text-xl font-medium">{name}</h1>
                 <p className="text-xs md:text-sm text-gray-300">{job}</p>
               </div>
             </div>
 
-            <p className="text-sm text-gray-400">{feedback}</p>
+            <p className="text-xs md:text-sm text-gray-400">{feedback}</p>
             <div className="flex w-full items-center justify-center mt-3">{renderStars(rating)}</div>
           </div>
         ))}

@@ -27,7 +27,7 @@ const CertificateZone = () => {
                 </span>
             </p>
         </div>
-        <div className='w-[800px] h-[400px] flex items-center justify-center'>
+        <div className='w-full md:w-[800px] h-[200px] md:h-[400px] flex items-center justify-center'>
             <div className='w-full h-full rounded-md bg-violet-700'></div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 import { assets } from '../../assets/assets'
 import { motion } from 'framer-motion'
+import LeaderboardTable from './leaderboardTable'
 
 const LeaderboardDetails = () => {
   return (
@@ -13,7 +14,7 @@ const LeaderboardDetails = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-            Top 10 Achievers
+            Top 5 Achievers
             </motion.h1>
             <img src={assets.mainText} alt="mainText" className='-mt-1' />
             </div>
@@ -26,6 +27,10 @@ const LeaderboardDetails = () => {
                     See what it takes to reach the top of the leaderboard.
                 </span>
             </p>
+        </div>
+
+        <div className='w-full md:w-[70%]'>
+            <LeaderboardTable />
         </div>
     </div>
   )
