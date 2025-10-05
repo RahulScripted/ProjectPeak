@@ -3,6 +3,11 @@ import Medium from './Medium.svg'
 import Hard from './Hard.svg'
 import Footer from './Footer.svg'
 import MainText from './MainText.svg'
+import Step1 from './Step1.svg'
+import Step2 from './Step2.svg'
+import Step3 from './Step3.svg'
+import Step4 from './Step4.svg'
+import Step5 from './Step5.svg'
 
 export const assets = {
     easy: Easy,
@@ -10,6 +15,11 @@ export const assets = {
     hard: Hard,
     footer: Footer,
     mainText: MainText,
+    step1: Step1,
+    step2: Step2,
+    step3: Step3,
+    step4: Step4,
+    step5: Step5,
 }
 
 export const faqData = [
@@ -42,5 +52,38 @@ export const faqData = [
     question: "How do I get started?",
     answer:
       "Just enroll for ₹149, log in to your dashboard, and begin with the Easy level. You can track your progress and unlock higher levels as you go.",
+  },
+];
+
+export const stepsData = [
+  {
+    title: "Register Your Account",
+    description:
+      "Start your ProjectPeak journey by creating your account and joining a community of innovators ready to take on exciting challenges.",
+    icon: Step1,
+  },
+  {
+    title: "Roll the Dice",
+    description:
+      "Let's make it fun! Roll the dice to get a random project assigned to you—each one designed to test your creativity and skills.",
+    icon: Step2,
+  },
+  {
+    title: "Develop Your Project",
+    description:
+      "Work on your assigned project using your expertise and creativity. Turn ideas into impactful, real-world solutions.",
+    icon: Step3,
+  },
+  {
+    title: "Share on LinkedIn",
+    description:
+      "Showcase your hard work! Share your completed project on LinkedIn and inspire others in your professional network.",
+    icon: Step4,
+  },
+  {
+    title: "Earn Your Score & Certification",
+    description:
+      "Based on your performance and marks obtained, receive your ProjectPeak score and an official certification to validate your achievement.",
+    icon: Step5,
   },
 ];
