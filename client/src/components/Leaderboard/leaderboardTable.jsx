@@ -59,7 +59,7 @@ const Leaderboard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div>
         {/* Leaderboard */}
         <div className="space-y-4">
           {leaders.length > 0 ? (
