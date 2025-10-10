@@ -170,7 +170,7 @@ const ProjectsData = () => {
                       {level.locked === true ? (
                         <ButtonCardText text={"Count Me In"} disabled={level.locked} />
                       ): (
-                        <ButtonCardText text={"Locked"} disabled={level.locked} />
+                        <ButtonCardText text={"Count Me In"} disabled={level.locked} />
                       )}
                     </div>
 
