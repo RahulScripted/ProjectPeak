@@ -18,7 +18,8 @@ const ProjectsData = () => {
       borderColor: "border-green-500",
       electricColor: "green",
       buttonText: "Count Me In",
-      locked: false,
+      locked: true,
+      link: '/easy'
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ const ProjectsData = () => {
       electricColor: "yellow",
       buttonText: "Count Me In",
       locked: false,
+      link: '/medium'
     },
     {
       id: 3,
@@ -45,6 +47,7 @@ const ProjectsData = () => {
       electricColor: "red",
       buttonText: "Count Me In",
       locked: false,
+      link: '/hard'
     },
   ];
 
@@ -168,7 +171,7 @@ const ProjectsData = () => {
 
                       {/* Button */}
                       {level.locked === true ? (
-                        <ButtonCardText text={"Count Me In"} disabled={level.locked} />
+                        <ButtonCardText text={"Count Me In"} disabled={level.locked} link={level.link} levelText={level.difficulty} />
                       ): (
                         <ButtonCardText text={"Count Me In"} disabled={level.locked} />
                       )}

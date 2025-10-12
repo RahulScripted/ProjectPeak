@@ -10,7 +10,7 @@ import PricingPlan from '../../components/Pricing_Plan/PricingPlan'
 
 const Home = () => {
   return (
-    <div className='flex flex-col w-full min-h-screen bg-black text-white p-5 md:p-10 gap-28'>
+    <div className='flex flex-col w-full min-h-screen gap-28'>
       <WorkingSteps />
       <ProjectsData />
       <LeaderboardDetails />
