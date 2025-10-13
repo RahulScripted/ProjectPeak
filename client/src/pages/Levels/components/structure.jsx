@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import { assets } from '../../../assets/assets';
 import { useLocation, useParams } from 'react-router-dom';
 import ButtonLuckySpin from '../../../helpers/button/luckySpin';
-import Easy from './easy';
-import Medium from './medium';
-import Hard from './hard';
+import LevelCard from './levelCard';
 
 const Structure = () => {
 
@@ -48,13 +46,7 @@ const Structure = () => {
         essential concepts and challenges in a way that is engaging and approachable.
       </motion.p>
 
-      {levelName === 'Easy' ? (
-        <Easy spinTrigger={spinTrigger} />
-      ) : levelName === 'Medium' ? (
-        <Medium spinTrigger={spinTrigger} />
-      ) : (
-        <Hard spinTrigger={spinTrigger} />
-      )}
+      <LevelCard spinTrigger={spinTrigger} />
 
       <div className='fixed bottom-3 md:bottom-10 flex items-center justify-center w-full'>
         <ButtonLuckySpin onClick={handleSpin} />

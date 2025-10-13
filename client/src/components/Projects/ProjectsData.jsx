@@ -32,7 +32,7 @@ const ProjectsData = () => {
       borderColor: "border-yellow-400",
       electricColor: "yellow",
       buttonText: "Count Me In",
-      locked: false,
+      locked: true,
       link: '/medium'
     },
     {
@@ -46,7 +46,7 @@ const ProjectsData = () => {
       borderColor: "border-red-500",
       electricColor: "red",
       buttonText: "Count Me In",
-      locked: false,
+      locked: true,
       link: '/hard'
     },
   ];
