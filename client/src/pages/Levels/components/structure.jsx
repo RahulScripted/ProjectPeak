@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { assets } from '../../../assets/assets';
-import { useLocation } from 'react-router-dom';
-import Easy from './Easy';
+import { useLocation, useParams } from 'react-router-dom';
+import ButtonLuckySpin from '../../../helpers/button/luckySpin';
+import Easy from './easy';
 import Medium from './medium';
 import Hard from './hard';
-import ButtonLuckySpin from '../../../helpers/button/luckySpin';
 
 const Structure = () => {
-  const location = useLocation();
-  const levelName = location.state?.levelName || 'Easy';
+
+  const { level } = useParams();
+  const levelName = level?.charAt(0).toUpperCase() + level?.slice(1);
 
   const [spinTrigger, setSpinTrigger] = useState(false);
 

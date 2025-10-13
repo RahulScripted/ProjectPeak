@@ -8,8 +8,8 @@ function App() {
   return (
     <div className=" w-full min-h-screen bg-black text-white p-5 md:p-10 ">
       <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Home />} />
-      <Route path="/easy" element={<LevelsCard />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:level" element={<LevelsCard />} />
       </Routes>
     </div>
   )
