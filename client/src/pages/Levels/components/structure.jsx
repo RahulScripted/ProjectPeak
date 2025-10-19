@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { assets } from '../../../assets/assets';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ButtonLuckySpin from '../../../helpers/button/luckySpin';
 import LevelCard from './levelCard';
 
 const Structure = () => {
-
   const { level } = useParams();
   const levelName = level?.charAt(0).toUpperCase() + level?.slice(1);
-
   const [spinTrigger, setSpinTrigger] = useState(false);
 
   useEffect(() => {
@@ -48,7 +46,7 @@ const Structure = () => {
 
       <LevelCard spinTrigger={spinTrigger} />
 
-      <div className='fixed bottom-3 md:bottom-10 flex items-center justify-center w-full'>
+      <div className='fixed bottom-3 md:bottom-5 flex items-center justify-center w-full'>
         <ButtonLuckySpin onClick={handleSpin} />
       </div>
     </div>

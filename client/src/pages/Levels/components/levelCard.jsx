@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const LevelCard = ({ spinTrigger }) => {
@@ -49,6 +49,13 @@ const LevelCard = ({ spinTrigger }) => {
         const isSelected = selectedBox === realIndex;
         const isHighlighted = highlightedBox === realIndex && selectedBox === null;
 
+        // Determine cursor class based on spinTrigger
+        const cursorClass = !spinTrigger 
+          ? 'cursor-not-allowed' 
+          : selectedBox !== null && !isSelected 
+            ? 'cursor-not-allowed' 
+            : 'cursor-pointer';
+
         return (
           <motion.div
             key={realIndex}
@@ -58,7 +65,6 @@ const LevelCard = ({ spinTrigger }) => {
               isHighlighted || isSelected
                 ? {
                     borderColor: ['#fff', '#8b5cf6', '#fff'],
-                    scale: [1, 1.05, 1],
                     borderRadius: ['8px', '20px', '8px'],
                     transition: { duration: 0.5, repeat: isSelected ? 0 : Infinity },
                   }
@@ -66,7 +72,7 @@ const LevelCard = ({ spinTrigger }) => {
             }
             className={`
               w-full sm:w-[300px] lg:w-[400px] h-60 border border-white rounded-md
-              ${selectedBox !== null && !isSelected ? 'pointer-events-none opacity-50 bg-[#11111150]' : 'bg-[#11111192] cursor-pointer'}
+              ${cursorClass} ${selectedBox !== null && !isSelected ? 'pointer-events-none opacity-50 bg-[#11111150]' : 'bg-[#11111192]'} ${!spinTrigger ? 'opacity-50' : 'hover:opacity-90'}
             `}
           ></motion.div>
         );
