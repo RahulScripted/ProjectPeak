@@ -1,8 +1,10 @@
-import React from 'react'
+
 
 const Footer = () => {
   return (
-    <div>footer</div>
+    <div className='flex flex-col'>
+      <span>2025 ProjectPeak. All rights reserved</span>
+    </div>
   )
 }
 

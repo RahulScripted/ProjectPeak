@@ -8,18 +8,20 @@ import Step2 from './Step2.svg'
 import Step3 from './Step3.svg'
 import Step4 from './Step4.svg'
 import Step5 from './Step5.svg'
+import Abouts from './Abouts.webp'
 
 export const assets = {
-    easy: Easy,
-    medium: Medium,
-    hard: Hard,
-    footer: Footer,
-    mainText: MainText,
-    step1: Step1,
-    step2: Step2,
-    step3: Step3,
-    step4: Step4,
-    step5: Step5,
+  easy: Easy,
+  medium: Medium,
+  hard: Hard,
+  footer: Footer,
+  mainText: MainText,
+  step1: Step1,
+  step2: Step2,
+  step3: Step3,
+  step4: Step4,
+  step5: Step5,
+  Abouts: Abouts,
 }
 
 export const faqData = [
