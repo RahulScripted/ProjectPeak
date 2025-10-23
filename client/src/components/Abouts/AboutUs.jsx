@@ -32,8 +32,8 @@ const AboutUs = () => {
 
         {/* Left Part */}
         <div className='w-full md:w-1/2 flex flex-col gap-3'>
-        <p className="text-gray-200">
-          At <b className='font-bold text-2xl'>Project Peak</b>, we are more than just a learning platform — we are a community of creators, innovators, and lifelong learners. 
+        <p className="text-gray-200 text-xs md:text-lg">
+          At <b className='font-bold text-lg md:text-2xl'>Project Peak</b>, we are more than just a learning platform — we are a community of creators, innovators, and lifelong learners. 
           Our goal is to make project creation accessible, enjoyable, and deeply rewarding for everyone, whether you're a complete beginner exploring the world of design and development or someone looking to sharpen your technical and creative skills. 
           We provide structured guidance, real-world examples, and hands-on projects that help learners build confidence and master the skills needed for today’s dynamic digital landscape.
           
@@ -46,7 +46,7 @@ const AboutUs = () => {
         </p>
 
           {/* Some Interesting Facts */}
-          <div className='w-full flex space-x-15 gap-10 flex-wrap mt-5 md:mt-10'>
+          <div className='w-full flex items-center justify-between md:justify-start gap-5 md:gap-10 flex-wrap mt-5 md:mt-10'>
             {facts.map((fact, index) => (
               <div key={index} className='flex flex-col'>
                 <span className='text-3xl md:text-4xl font-bold'>{fact.number}</span>
