@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
 import Easy from "../../assets/Easy.svg";
 import Medium from "../../assets/Medium.svg";
 import Hard from "../../assets/Hard.svg";
 import ButtonCardText from "../../helpers/button/buttonCard";
 import { assets } from "../../assets/assets";
+import { AppContext } from "../../context/AppContext";
 
 const ProjectsData = () => {
+  const { user, completedLevels } = useContext(AppContext);
+
   const levels = [
     {
       id: 1,
@@ -18,7 +22,8 @@ const ProjectsData = () => {
       borderColor: "border-green-500",
       electricColor: "green",
       buttonText: "Count Me In",
-      locked: true,
+      locked: user,
+      completed: completedLevels.easy,
       link: '/easy'
     },
     {
@@ -32,7 +37,8 @@ const ProjectsData = () => {
       borderColor: "border-yellow-400",
       electricColor: "yellow",
       buttonText: "Count Me In",
-      locked: true,
+      locked: user && completedLevels.easy,
+      completed: completedLevels.medium,
       link: '/medium'
     },
     {
@@ -46,7 +52,8 @@ const ProjectsData = () => {
       borderColor: "border-red-500",
       electricColor: "red",
       buttonText: "Count Me In",
-      locked: true,
+      locked: user && completedLevels.easy && completedLevels.medium,
+      completed: completedLevels.hard,
       link: '/hard'
     },
   ];

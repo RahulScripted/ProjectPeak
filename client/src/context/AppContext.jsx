@@ -5,16 +5,21 @@ import { useNavigate } from "react-router-dom";
 export const AppContext = createContext();
 
 const AppContextProvider = (props) => {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   const [showLogin, setShowLogin] = useState(false);
   const [token, setToken] = useState(null);
-  const [live, setLive] = useState(false);
+  const [live, setLive] = useState(0);
   const [passwordResetStep, setPasswordResetStep] = useState("email");
 //   const [resetEmail, setResetEmail] = useState("");
 //   const [resetToken, setResetToken] = useState("");
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [purchase, setPurchase] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
+  const [completedLevels, setCompletedLevels] = useState({
+    easy: false,
+    medium: false,
+    hard: false
+  });
 //   const navigate = useNavigate();
 
   const value = {
@@ -41,6 +46,8 @@ const AppContextProvider = (props) => {
     // resetPasswordFlow,
     showPopUp,
     setShowPopUp,
+    completedLevels,
+    setCompletedLevels,
   };
 
   return (

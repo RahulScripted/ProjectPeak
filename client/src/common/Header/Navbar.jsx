@@ -25,9 +25,10 @@ const Navbar = () => {
             onClick={() => navigate("/pricing")}
             className="flex gap-2 items-center bg-[#111] px-4 py-1.5 md:py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
           >
-            <Heart className="w-4 h-4 md:w-5 md:h-5 text-red-600" />
-            <p className="hidden md:block text-xs md:text-sm">Credits : {live}</p>
-            <p className="block md:hidden text-xs md:text-sm">{live}</p>
+            <span className="text-sm md:text-base flex items-center gap-2">
+              {live}
+              <Heart className="w-5 h-5 text-red-500" />
+            </span>
           </button>
           <p className="hidden md:block">Hi, {user.name}</p>
           <div 
