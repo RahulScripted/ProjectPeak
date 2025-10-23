@@ -8,7 +8,7 @@ import Step2 from './Step2.svg'
 import Step3 from './Step3.svg'
 import Step4 from './Step4.svg'
 import Step5 from './Step5.svg'
-import Abouts from './Abouts.webp'
+import Abouts from './Abouts.png'
 
 export const assets = {
   easy: Easy,
