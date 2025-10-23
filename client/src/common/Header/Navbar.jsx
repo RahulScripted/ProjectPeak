@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { User } from "lucide-react";
+import { Heart, User } from "lucide-react";
+import { AppContext } from "../../context/AppContext";
 
 const Navbar = () => {
-  const [user, setUser] = useState(false)
+  const { user, setShowLogin, logout, live } = useContext(AppContext);
   const navigate = useNavigate();
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -13,13 +14,21 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-between">
+    <div className="w-full flex items-center justify-between mb-10">
       <Link to="/">
         <h1>ProjectPeak</h1>
       </Link>
 
       {user ? (
         <div className="flex items-center gap-4 md:gap-5">
+          <button
+            onClick={() => navigate("/pricing")}
+            className="flex gap-2 items-center bg-[#111] px-4 py-1.5 md:py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
+          >
+            <Heart className="w-4 h-4 md:w-5 md:h-5 text-red-600" />
+            <p className="hidden md:block text-xs md:text-sm">Credits : {live}</p>
+            <p className="block md:hidden text-xs md:text-sm">{live}</p>
+          </button>
           <p className="hidden md:block">Hi, {user.name}</p>
           <div 
             onClick={showTool} 
@@ -42,7 +51,7 @@ const Navbar = () => {
                   Dashboard
                 </li>
                 <li
-                  // onClick={logout}
+                  onClick={logout}
                   className="text-sm px-7 py-2 bg-white rounded pr-10 hover:opacity-70 transition-all duration-300"
                 >
                   Logout

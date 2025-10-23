@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { assets } from '../../../assets/assets';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ButtonLuckySpin from '../../../helpers/button/luckySpin';
 import LevelCard from './levelCard';
 
@@ -9,7 +9,6 @@ const Structure = () => {
   const { level } = useParams();
   const levelName = level?.charAt(0).toUpperCase() + level?.slice(1);
   const [spinTrigger, setSpinTrigger] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -18,10 +17,6 @@ const Structure = () => {
   const handleSpin = () => {
     setSpinTrigger(prev => !prev);
   };
-
-  const handleNavigation = () => {
-    navigate('/');
-  }
 
   return (
     <div className='flex flex-col items-center justify-center relative gap-10 w-full'>
@@ -53,10 +48,6 @@ const Structure = () => {
       <div className='fixed bottom-3 md:bottom-5 flex items-center justify-center w-full'>
         <ButtonLuckySpin onClick={handleSpin} />
       </div>
-
-      <button className='absolute rounded-full top-0 left-0 cursor-pointer' onClick={handleNavigation}>
-        Back
-      </button>
     </div>
   );
 };
