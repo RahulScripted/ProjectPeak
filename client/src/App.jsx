@@ -83,7 +83,7 @@ function App() {
 
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col gap-10 md:gap-24 bg-black text-white p-5 md:px-10 ">
+    <div className="relative w-full min-h-screen flex flex-col gap-10 md:gap-24 bg-black text-white p-5 md:px-10 z-10">
 
       {loading && <PreviewLoader />}
 

@@ -9,6 +9,7 @@ import Step3 from './Step3.svg'
 import Step4 from './Step4.svg'
 import Step5 from './Step5.svg'
 import Abouts from './Abouts.png'
+import Hero from './Hero.webp'
 
 export const assets = {
   easy: Easy,
@@ -22,6 +23,7 @@ export const assets = {
   step4: Step4,
   step5: Step5,
   Abouts: Abouts,
+  Hero: Hero,
 }
 
 export const faqData = [
